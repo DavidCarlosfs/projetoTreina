@@ -24,7 +24,7 @@ import com.api.sprinapi.models.submodels.Tecnico;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo_formacao", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorColumn(name = "formacao", discriminatorType = DiscriminatorType.STRING)
 
 public class Formacao {
     @Id
