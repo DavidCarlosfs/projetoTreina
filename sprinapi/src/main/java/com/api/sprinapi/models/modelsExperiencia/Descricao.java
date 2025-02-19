@@ -1,4 +1,4 @@
-package com.api.sprinapi.models.submodels;
+package com.api.sprinapi.models.modelsExperiencia;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.DiscriminatorValue;
@@ -11,8 +11,6 @@ import java.time.YearMonth;
 
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
-
-import com.api.sprinapi.models.Experiencia;
 
 @Entity
 @DiscriminatorValue("descricao")
@@ -38,11 +36,11 @@ public class Descricao extends Experiencia {
     @Size(min = 2, max = 150)
     private String funcao;
 
-    public YearMonth getdataInicioFunc() { return dataInicioFunc; }
-    public void setdataInicioFunc(YearMonth dataInicioFunc) { this.dataInicioFunc = dataInicioFunc; }
+    public YearMonth getDataInicioFunc() { return dataInicioFunc; }
+    public void setDataInicioFunc(YearMonth dataInicioFunc) { this.dataInicioFunc = dataInicioFunc; }
 
-    public YearMonth getdataFinalFunc() { return dataFinalFunc; }
-    public void setdataFinalFunc(YearMonth dataFinalFunc) { this.dataFinalFunc = dataFinalFunc; }
+    public YearMonth getDataFinalFunc() { return dataFinalFunc; }
+    public void setDataFinalFunc(YearMonth dataFinalFunc) { this.dataFinalFunc = dataFinalFunc; }
 
     public String getFuncao() { return funcao; }
     public void setFuncao(String funcao) { this.funcao = funcao; }

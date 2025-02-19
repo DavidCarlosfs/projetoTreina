@@ -1,4 +1,4 @@
-package com.api.sprinapi.models;
+package com.api.sprinapi.models.modelsIdentificacao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,16 +10,6 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import jakarta.persistence.Embedded;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import java.util.List;
-import java.util.Optional;
-
-import com.api.sprinapi.models.submodels.Endereco;
 
 @Entity
 @Table(name = Identificacao.TABLE_STRING)

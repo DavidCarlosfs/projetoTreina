@@ -1,4 +1,4 @@
-package com.api.sprinapi.models;
+package com.api.sprinapi.models.modelsExperiencia;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -20,8 +20,6 @@ import java.util.List;
 
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
-
-import com.api.sprinapi.models.submodels.Descricao;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -59,6 +57,9 @@ public class Experiencia {
     @Size(min = 2, max = 100)
     private String cargo;
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Descricao> descricoes;
+
     public Long getId_experiencia() { return id_experiencia; }
     public void setId_experiencia(Long id_experiencia) { this.id_experiencia = id_experiencia; }
 
@@ -74,7 +75,8 @@ public class Experiencia {
     public String getCargo() { return cargo; }
     public void setCargo(String cargo) { this.cargo = cargo; }
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Descricao> descricoes;
+    public List<Descricao> getDescricoes() { return descricoes;  }
+    
+    public void setDescricoes(List<Descricao> descricoes) { this.descricoes = descricoes; }    
 
 }

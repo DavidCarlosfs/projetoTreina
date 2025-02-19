@@ -1,4 +1,4 @@
-package com.api.sprinapi.models;
+package com.api.sprinapi.models.modelsFormacao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,10 +17,6 @@ import jakarta.persistence.CascadeType;
 
 import java.time.Year;
 import java.util.List;
-
-import com.api.sprinapi.models.submodels.Graduacao;
-import com.api.sprinapi.models.submodels.PosGraduacao;
-import com.api.sprinapi.models.submodels.Tecnico;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

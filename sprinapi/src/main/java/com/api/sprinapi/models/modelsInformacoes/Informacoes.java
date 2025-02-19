@@ -1,4 +1,4 @@
-package com.api.sprinapi.models;
+package com.api.sprinapi.models.modelsInformacoes;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,6 +25,19 @@ public class Informacoes {
     @Size(min = 2, max = 50)
     private String rede;
 
-    
+    @Column(name = "link", length = 100, nullable = false)
+    @NotNull
+    @NotEmpty
+    @Size(min = 2, max = 100)
+    private String link;
+
+    public Long getId_informacoes() { return id_informacoes; }
+    public void setId_informacoes(Long id_informacoes) { this.id_informacoes = id_informacoes; }
+
+    public String getRede() { return rede; }
+    public void setRede(String rede) { this.rede = rede; }
+
+    public String getLink() { return link; }
+    public void setLink(String link) { this.link = link; }
     
 }

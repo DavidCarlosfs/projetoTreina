@@ -1,4 +1,4 @@
-package com.api.sprinapi.models.submodels;
+package com.api.sprinapi.models.modelsIdentificacao;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Column;

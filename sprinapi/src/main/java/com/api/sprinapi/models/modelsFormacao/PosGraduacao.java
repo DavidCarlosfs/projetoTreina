@@ -1,9 +1,7 @@
-package com.api.sprinapi.models.submodels;
+package com.api.sprinapi.models.modelsFormacao;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.DiscriminatorValue;
-
-import com.api.sprinapi.models.Formacao;
 
 @Entity
 @DiscriminatorValue("PosGraduacao")
