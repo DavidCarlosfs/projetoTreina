@@ -30,6 +30,9 @@ public class Identificacao {
     @NotEmpty
     private String telefone;
 
+    @Column(name = "whatsapp", length = 11)
+    private String whatsapp;
+
     @Column(name = "email", length = 100, nullable = false)
     @NotNull
     @NotEmpty
@@ -51,6 +54,9 @@ public class Identificacao {
 
     public String getTelefone() { return telefone; }
     public void setTelefone(String telefone) { this.telefone = telefone; }
+
+    public String getWhatsapp() {  return whatsapp; }
+    public void setWhatsapp(String whatsapp) { this.whatsapp = telefone; }
 
     public Endereco getEndereco() { return endereco; }
     public void setEndereco(Endereco endereco) { this.endereco = endereco; }

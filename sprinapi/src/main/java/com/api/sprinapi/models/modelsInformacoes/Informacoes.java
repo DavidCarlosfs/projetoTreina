@@ -19,13 +19,7 @@ public class Informacoes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_informacoes;
 
-    @Column(name = "rede", length = 50, nullable = false)
-    @NotNull
-    @NotEmpty
-    @Size(min = 2, max = 50)
-    private String rede;
-
-    @Column(name = "link", length = 100, nullable = false)
+    @Column(name = "link", length = 100, nullable = false, unique = true)
     @NotNull
     @NotEmpty
     @Size(min = 2, max = 100)
@@ -33,9 +27,6 @@ public class Informacoes {
 
     public Long getId_informacoes() { return id_informacoes; }
     public void setId_informacoes(Long id_informacoes) { this.id_informacoes = id_informacoes; }
-
-    public String getRede() { return rede; }
-    public void setRede(String rede) { this.rede = rede; }
 
     public String getLink() { return link; }
     public void setLink(String link) { this.link = link; }
