@@ -12,8 +12,6 @@ import com.api.sprinapi.models.modelsIdentificacao.Identificacao;
 public interface IdentificacaoRepositories extends JpaRepository<Identificacao, Long> {
     Optional<Identificacao> findByNome(String nome);
     Optional<Identificacao> findByEmail(String email);
-    List<Identificacao> findByTelefone(String telefone);
-    Optional<Identificacao> findByWhatsapp(String whatsapp);
-    //Criar uma busca Optional para caso haja Whatsapp
+
     
 }
